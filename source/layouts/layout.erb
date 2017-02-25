@@ -9,19 +9,26 @@
     <!-- Use title if it's in the page YAML frontmatter -->
     <title><%= current_page.data.title || "Middleman" %></title>
 
-    <%= stylesheet_link_tag "site" %>
+    <%= stylesheet_link_tag "q.core.min" %>
+    <%= stylesheet_link_tag "core.min" %>
     <%= javascript_include_tag "site" %>
   </head>
 
   <body class="<%= page_classes %>">
-    <div id="container">
-      <div id="content">
-        <div class="post" id="post-193">
-          <h2><b><%= current_page.data.title %></b></h2>
-          <div class="entry">
+    <div class="tl_page_wrap">
+      <div class="tl_page">
+        <main class="tl_article">
+          <header class="tl_article_header">
+            <h1>Разыскивается мой спаситель -Работа</h1>
+            <address>
+              <a rel="author" href="#" target="_blank">Евгений Варламов</a><!--
+           --><time datetime="2016-12-26T17:03:10+0000">26 февраля 2017 г.</time>
+            </address>
+          </header>
+          <article class="tl_article_content ql-container ql-disabled">
             <%= yield %>
-          </div>
-        </div>
+          </article>
+        </main>
       </div>
     </div>
   </body>
