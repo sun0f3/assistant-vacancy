@@ -41,6 +41,7 @@ end
 configure :build do
   # Minify CSS on build
   # activate :minify_css
+  set :http_prefix, 'assistant-vacancy/'
 
   # Minify Javascript on build
   # activate :minify_javascript
